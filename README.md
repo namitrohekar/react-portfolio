@@ -1,12 +1,83 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 React Portfolio Website
 
-Currently, two official plugins are available:
+A personal portfolio website built using **React** to showcase my skills, projects, and resume. This was created as part of the *Deploying on Platforms* assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fully responsive and mobile-friendly
+- Sections:
+  - About Me
+  - Skills
+  - Projects
+  - Resume
+  - Contact
+- Light/Dark mode toggle (default: Dark)
+- Smooth UI and minimal design
+- Deployed on Vercel with free SSL (HTTPS)
+
+---
+
+## 🧰 Tech Stack
+
+- React (Vite)
+- Tailwind CSS
+- Lucide Icons
+- Custom Hooks
+- Deployed on Vercel
+
+---
+
+## ⚙️ Optimization
+
+- **Lazy Loading** of components for faster initial load
+- **Minified** JS and CSS files via `vite build`
+- **Responsive Design** with mobile-first approach
+
+
+## 🌐 Deployment
+
+Deployed using **Vercel**
+🔗 **Live Site**: [https://react-portfolio-two-lac.vercel.app](https://react-portfolio-two-lac.vercel.app)
+
+
+* Free Hosting with Vercel
+* Auto SSL (HTTPS)
+* CI/CD via GitHub integration
+
+---
+
+## 📸 Screenshots
+
+| Desktop View                        | Mobile View                       |
+| ----------------------------------- | --------------------------------- |
+| ![Desktop](./src/assets/desktop.png) | ![Mobile](./src/assets/mobile.jpg) |
+
+
+
+---
+
+## 🧠 Challenges Faced
+
+* Making dark mode the default on first visit
+* Ensuring pixel-perfect responsiveness on all devices
+* Understanding and configuring Vercel deployment
+* Placeholder email contact form (to be integrated with EmailJS)
+
+---
+
+## 💡 Future Improvements
+
+* Connect contact form with **EmailJS** for live email submissions
+* Add blog or testimonials section
+* Enhance animations using **Framer Motion**
+* Setup a custom domain when possible
+
+
+
+
+
+
+
