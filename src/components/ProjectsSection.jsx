@@ -15,23 +15,23 @@ const projects =[
     
     {
         id:2,
-        title :"YouTube HomePage",
-        description:"Replicating beautifully complex layout of YouTube.",
-        image: "./projects/PREVIEW.png",
-        tags: ["HTML","CSS"],
-        demoUrl:"#",
-        githubUrl:"#"
+        title :"React Portfolio",
+        description:"Presenting a sleek React portfolio, launched into the digital cosmos",
+        image: "./projects/Portfolio.png",
+        tags: ["React","JavaScript", "TailwindCSS"],
+        demoUrl:"https://react-portfolio-two-lac.vercel.app/",
+        githubUrl:"https://github.com/namitrohekar/react-portfolio"
     },
     
-    {
-        id:3,
-        title :"YouTube HomePage",
-        description:"Replicating beautifully complex layout of YouTube.",
-        image: "./projects/PREVIEW.png",
-        tags: ["HTML","CSS"],
-        demoUrl:"#",
-        githubUrl:"#"
-    },
+    // {
+    //     id:3,
+    //     title :"YouTube HomePage",
+    //     description:"Replicating beautifully complex layout of YouTube.",
+    //     image: "./projects/PREVIEW.png",
+    //     tags: ["HTML","CSS"],
+    //     demoUrl:"#",
+    //     githubUrl:"#"
+    // },
 ]
 
 
