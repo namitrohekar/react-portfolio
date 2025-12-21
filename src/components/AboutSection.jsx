@@ -12,10 +12,11 @@ export const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                     <h3 className="text-2xl font-semibold">
-                        Passionate Web Developer & Tech Entusiast
+                        Full-Stack Developer building production-grade web systems
                     </h3>
                     <p className="text-muted-foreground">
-                    Full-Stack DevOps Developer passionate about building scalable, cloud-native apps, automating workflows, and contributing to open-source.
+                  I'am in designing, building, and deploying end-to-end web applications using React, Spring Boot, and MySQL. I focus on clean APIs, secure authentication, and scalable architectures.
+
 
                     </p>
                     <p className="text-muted-foreground">
@@ -25,7 +26,7 @@ export const AboutSection = () => {
                         <a href="#contact" className="cosmic-button">
                             Get In Touch
                         </a>
-                        <a href="#" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 
+                        <a href="./projects/NAMIT ROHEKAR 2.pdf" target="_blank" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 
                         transition-color duration-300">
                             Download CV
                         </a>
@@ -41,9 +42,9 @@ export const AboutSection = () => {
                             <Code className="h-6 w-6 text-primary"/> 
                             </div>
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
-                                <p className="text-muted-foreground"> Creating responsive websites and web applications with 
-                                    modern frameworks</p>
+                                <h4 className="font-semibold text-lg">Frontend Engineering</h4>
+                                <p className="text-muted-foreground">  Building scalable React applications with clean component architecture,
+                                 state management, and responsive UI using TailwindCSS.</p>
                             </div>
                         </div>
                     </div>
@@ -53,8 +54,9 @@ export const AboutSection = () => {
                             <Braces className="h-6 w-6 text-primary"/> 
                             </div>
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Java Full Stack</h4>
-                                <p className="text-muted-foreground"> Building robust applications using Core Java, JDBC, Servlets, JSP, and Spring Boot.</p>
+                                <h4 className="font-semibold text-lg">Backend & APIs</h4>
+                                <p className="text-muted-foreground"> Designing RESTful APIs with Spring Boot, implementing JWT authentication,
+                                role-based access control, and MySQL-backed data models.</p>
                             </div>
                         </div>
                     </div>
@@ -64,8 +66,9 @@ export const AboutSection = () => {
                             <Puzzle className="h-6 w-6 text-primary"/> 
                             </div>
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Problem solver</h4>
-                                <p className="text-muted-foreground"> Bringing creativity and logic together to build solutions that are both beautiful and efficient.</p>
+                                <h4 className="font-semibold text-lg">Systems Thinking</h4>
+                                <p className="text-muted-foreground">   Translating requirements into reliable systems, handling edge cases,
+                                 and making pragmatic trade-offs across frontend, backend, and deployment.</p>
                             </div>
                         </div>
                     </div>
