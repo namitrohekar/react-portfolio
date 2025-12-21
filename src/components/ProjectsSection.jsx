@@ -2,6 +2,24 @@ import { Description } from "@radix-ui/react-toast";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects =[
+        {
+        id:1,
+        title: "CompatX",
+        description: "A full-stack e-commerce application with authentication, cart, orders, admin panel, and real-world payment integration.",
+        image: "./projects/CompatX.png",
+        tags: ["React", "Spring Boot", "MySQL", "JWT", "TailwindCSS"],
+        demoUrl: "https://compat-x.vercel.app/",
+        githubUrl: "https://github.com/namitrohekar/CompatX"
+    },
+    {
+        id:2,
+        title :"React Portfolio",
+        description:"Presenting a sleek React portfolio, launched into the digital cosmos",
+        image: "./projects/Portfolio.png",
+        tags: ["React","JavaScript", "TailwindCSS"],
+        demoUrl:"https://react-portfolio-two-lac.vercel.app/",
+        githubUrl:"https://github.com/namitrohekar/react-portfolio"
+    },
 
     {
         id:3,
@@ -13,25 +31,7 @@ const projects =[
         githubUrl:"https://github.com/namitrohekar/youtube-homepage"
     },
     
-    {
-        id:2,
-        title :"React Portfolio",
-        description:"Presenting a sleek React portfolio, launched into the digital cosmos",
-        image: "./projects/Portfolio.png",
-        tags: ["React","JavaScript", "TailwindCSS"],
-        demoUrl:"https://react-portfolio-two-lac.vercel.app/",
-        githubUrl:"https://github.com/namitrohekar/react-portfolio"
-    },
     
-   {
-    id:1,
-    title: "CompatX – E-Commerce Platform",
-    description: "A full-stack e-commerce application with authentication, cart, orders, admin panel, and real-world payment integration.",
-    image: "./projects/CompatXlinkedin.png",
-    tags: ["React", "Spring Boot", "MySQL", "JWT", "TailwindCSS"],
-    demoUrl: "https://compat-x.vercel.app/",
-    githubUrl: "https://github.com/namitrohekar/CompatX"
-},
 ]
 
 
@@ -49,11 +49,17 @@ export const ProjectsSection =() => {
 
                 <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 " > 
                     {projects.map((project,key)=>(
-                        <div key ={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                        <div key ={key}
+                        //  className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+                         className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
+                        >
                             <div className="h-40 overflow-hidden">
                                 <img src={project.image} alt={project.title} className="w-full h-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" />
                             </div>        
-                            <div className="p-6">
+                            <div 
+                            // className="p-6"
+                            className="p-6 flex flex-col flex-1"
+                            >
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags.map((tag)=>(
                                         <span className="px-3 py-1 text-xs font-medium  border rounded-full 
@@ -69,7 +75,11 @@ export const ProjectsSection =() => {
                             <p className="text-muted-foreground text-sm mb-4">
                                 {project.description}
                             </p>
-                            <div className="flex justify-between items-center">
+                            <div 
+                            // className="flex justify-between items-center"
+                            className=" mt-auto flex justify-between items-center"
+                            
+                            >
                                 <div className="flex space-x-3"> 
                                     <a href={project.demoUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                         <ExternalLink size={20} />
