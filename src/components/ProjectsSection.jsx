@@ -23,15 +23,15 @@ const projects =[
         githubUrl:"https://github.com/namitrohekar/react-portfolio"
     },
     
-    // {
-    //     id:3,
-    //     title :"YouTube HomePage",
-    //     description:"Replicating beautifully complex layout of YouTube.",
-    //     image: "./projects/PREVIEW.png",
-    //     tags: ["HTML","CSS"],
-    //     demoUrl:"#",
-    //     githubUrl:"#"
-    // },
+   {
+    id:3,
+    title: "CompatX – E-Commerce Platform",
+    description: "A full-stack e-commerce application with authentication, cart, orders, admin panel, and real-world payment integration.",
+    image: "./projects/CompatXlinkedin.png",
+    tags: ["React", "Spring Boot", "MySQL", "JWT", "TailwindCSS"],
+    demoUrl: "https://compat-x.vercel.app/",
+    githubUrl: "https://github.com/namitrohekar/CompatX"
+},
 ]
 
 
