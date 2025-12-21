@@ -4,7 +4,7 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects =[
 
     {
-        id:1,
+        id:3,
         title :"YouTube HomePage",
         description:"Replicating beautifully complex layout of YouTube.",
         image: "./projects/PREVIEW.png",
@@ -24,7 +24,7 @@ const projects =[
     },
     
    {
-    id:3,
+    id:1,
     title: "CompatX – E-Commerce Platform",
     description: "A full-stack e-commerce application with authentication, cart, orders, admin panel, and real-world payment integration.",
     image: "./projects/CompatXlinkedin.png",
