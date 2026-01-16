@@ -1,11 +1,11 @@
 
-# 🚀 React Portfolio Website
+#  React Portfolio Website
 
 A personal portfolio website built using **React** to showcase my skills, projects, and resume. This was created as part of the *Deploying on Platforms* assignment.
 
 ---
 
-## ✨ Features
+##  Features
 
 - Fully responsive and mobile-friendly
 - Sections:
@@ -20,7 +20,7 @@ A personal portfolio website built using **React** to showcase my skills, projec
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - React (Vite)
 - Tailwind CSS
@@ -30,14 +30,14 @@ A personal portfolio website built using **React** to showcase my skills, projec
 
 ---
 
-## ⚙️ Optimization
+##  Optimization
 
 - **Lazy Loading** of components for faster initial load
 - **Minified** JS and CSS files via `vite build`
 - **Responsive Design** with mobile-first approach
 
 
-## 🌐 Deployment
+##  Deployment
 
 Deployed using **Vercel**
 🔗 **Live Site**: [https://react-portfolio-two-lac.vercel.app](https://react-portfolio-two-lac.vercel.app)
@@ -59,7 +59,7 @@ Deployed using **Vercel**
 
 ---
 
-## 🧠 Challenges Faced
+##  Challenges Faced
 
 * Making dark mode the default on first visit
 * Ensuring pixel-perfect responsiveness on all devices
@@ -68,7 +68,7 @@ Deployed using **Vercel**
 
 ---
 
-## 💡 Future Improvements
+##  Future Improvements
 
 * Connect contact form with **EmailJS** for live email submissions
 * Add blog or testimonials section
