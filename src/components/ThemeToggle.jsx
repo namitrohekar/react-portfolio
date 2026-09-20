@@ -4,6 +4,16 @@ import { cn } from "../lib/util";
 
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 10);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -35,9 +45,10 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-none"
-      )}
+  "fixed max-sm:hidden right-5 z-50 p-2 rounded-full transition-all duration-200",
+  isScrolled ? "top-3" : "top-5",
+  "focus:outline-none"
+)}
     >
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />

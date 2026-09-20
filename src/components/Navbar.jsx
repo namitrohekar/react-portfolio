@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -24,13 +25,20 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed  top-0 left-0 w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
+  <nav
+  className={cn(
+    "fixed top-0 left-0 w-full z-40 transition-all duration-200",
+    isScrolled
+      ? "bg-background/80 backdrop-blur-md shadow-xs"
+      : "bg-transparent"
+  )}
+>
+  <div
+    className={cn(
+      "container flex items-center justify-between transition-[height] duration-200",
+      isScrolled ? "h-16" : "h-20"
+    )}
+  >
         <a
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
@@ -47,7 +55,7 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              className="text-foreground/80 hover:text-primary transition-colors duration-200"
             >
               {item.name}
             </a>
@@ -67,7 +75,7 @@ export const Navbar = () => {
         <div
           className={cn(
             "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
+            "transition-all duration-200 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto h-[100vh]"
               : "opacity-0 pointer-events-none"
@@ -78,7 +86,7 @@ export const Navbar = () => {
               <a
                 key={key}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                className="text-foreground/80 hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

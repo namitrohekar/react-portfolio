@@ -9,15 +9,19 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
 
   --color-card: hsl(var(--card));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-input: hsl(var(--input));
 
   --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 9s ease-in-out infinite;
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 5s linear infinite;
+  --animate-meteor: meteor 10s linear infinite;
 
   @keyframes float {
     0%,
@@ -34,7 +38,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.8;
+      opacity: 0.55;
     }
   }
   @keyframes fade-in {
@@ -68,6 +72,10 @@
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --muted-foreground: 215 16% 42%;
+    --input: 214 32% 91%;
 
     --primary: 250 47% 60%;
     --primary-foreground: 210 40% 98%;
@@ -80,6 +88,10 @@
     --foreground: 213 31% 91%;
 
     --card: 222 47% 8%;
+    --secondary: 217 33% 15%;
+    --secondary-foreground: 213 31% 91%;
+    --muted-foreground: 215 20% 65%;
+    --input: 217 33% 20%;
 
     --primary: 250 65% 65%;
     --primary-foreground: 213 31% 91%;
@@ -96,7 +108,8 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground;
+    transition: background-color 200ms ease, color 200ms ease;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -131,6 +144,21 @@
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
+/* Section reveal — starts hidden, transitions to visible when .is-visible is added by useReveal */
+@utility reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @utility gradient-border {
   @apply relative rounded-md;
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
@@ -139,7 +167,7 @@
 }
 
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
          hover:scale-105 active:scale-95;
 }
@@ -154,9 +182,102 @@
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
+.professional-grid {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 86%, transparent);
+}
+
+.experience-shell {
+  isolation: isolate;
+}
+
+.experience-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(139, 92, 246, 0.65), rgba(34, 211, 238, 0.45), rgba(16, 185, 129, 0.45));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
+
+
+
+.experience-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    opacity 600ms ease-out,
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.experience-card:hover {
+  transform: translateY(0) scale(1.015);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.experience-card::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 45%;
+  height: 220%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04),
+    transparent
+  );
+  transform: skewX(-18deg);
+  animation: experience-card-shine 4s ease-in-out infinite;
+}
+
+@keyframes experience-card-shine {
+  0%,
+  35% {
+    transform: translateX(0) skewX(-18deg);
+    opacity: 0;
+  }
+
+  42% {
+    opacity: 0.8;
+  }
+
+  55% {
+    opacity: 0.8;
+  }
+
+  65% {
+    transform: translateX(420%) skewX(-18deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(420%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+
